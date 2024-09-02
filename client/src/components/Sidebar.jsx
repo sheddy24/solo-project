@@ -1,11 +1,14 @@
 import React from 'react';
-import { Drawer, Toolbar, Box, List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
+import { Link } from 'react-router-dom';
+import { Drawer, Toolbar, Box, List, ListItem, ListItemIcon, ListItemText, Badge } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useCart } from '../context/cartContext';
 
 export default function Sidebar() {
+  const { cartItems } = useCart();
   return (
     <Drawer
       variant="permanent"
@@ -45,9 +48,12 @@ export default function Sidebar() {
               primaryTypographyProps={{ fontSize: '1.25rem' }}
             />
           </ListItem>
-          <ListItem button>
+
+          <ListItem button component={Link} to="/cart">
             <ListItemIcon sx={{ minWidth: 40 }}>
+              <Badge badgeContent={cartItems.length} color="primary">
               <ShoppingCartIcon sx={{ fontSize: 30 }} />
+              </Badge>
             </ListItemIcon>
             <ListItemText
               primary="Cart"

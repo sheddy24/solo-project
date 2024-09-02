@@ -27,8 +27,8 @@ export const LaptopProvider = ({ children }) => {
           productName: "Huawei MateBook X Pro",
           image:
             "https://img.freepik.com/free-photo/laptop-white-background-3d-rendering-computer-generated-image_1142-45811.jpg?ga=GA1.1.1860668642.1707247523&semt=ais_hybrid",
-          backview: "",
-          sideview: "",
+          backview: "https://www.yugatech.com/wp-content/uploads/2024/07/Huawei-Matebook-X-Pro-1.jpg",
+          sideview: "https://www.androidauthority.com/wp-content/uploads/2024/04/Huawei-MateBook-X-Pro-2024-thin-side-profile.jpg",
           cpu: "Intel Core i7, 8th generation",
           ram: "8GB",
           storage: "512 GB SSD",
@@ -42,8 +42,8 @@ export const LaptopProvider = ({ children }) => {
           productName: "Huawei MateBook X Pro",
           image:
             "https://img.freepik.com/free-photo/laptop-white-background-3d-rendering-computer-generated-image_1142-45811.jpg?ga=GA1.1.1860668642.1707247523&semt=ais_hybrid",
-          backview: "",
-          sideview: "",
+          backview: "https://5.imimg.com/data5/CC/JH/KD/SELLER-57126529/huawei-mate-book-x-pro-new-512-gb-laptop-500x500.jpg",
+          sideview: "https://images.techadvisor.com/cmsdata/reviews/3692414/huawei_matebook_x_pro_2019_ports.jpg",
           cpu: "Intel Core i7, 8th generation",
           ram: "8GB",
           storage: "512 GB SSD",
@@ -57,8 +57,8 @@ export const LaptopProvider = ({ children }) => {
           productName: "Huawei MateBook X Pro",
           image:
             "https://img.freepik.com/free-photo/laptop-white-background-3d-rendering-computer-generated-image_1142-45811.jpg?ga=GA1.1.1860668642.1707247523&semt=ais_hybrid",
-          backview: "",
-          sideview: "",
+          backview: "https://media.extra.com/i/aurora/100337315_100_08?fmt=auto&w=720",
+          sideview: "https://dwgyu36up6iuz.cloudfront.net/heru80fdn/image/upload/c_fill,d_placeholder_arstechnica.png,fl_progressive,g_face,h_450,q_80,w_800/v1497467701/arstechnica_gear-gadgets-huawei-s-thin-and-powerful-matebook-x-laptop-review.jpg",
           cpu: "Intel Core i7, 8th generation",
           ram: "8GB",
           storage: "512 GB SSD",
@@ -72,8 +72,8 @@ export const LaptopProvider = ({ children }) => {
           productName: "Huawei MateBook X Pro",
           image:
             "https://img.freepik.com/free-photo/laptop-white-background-3d-rendering-computer-generated-image_1142-45811.jpg?ga=GA1.1.1860668642.1707247523&semt=ais_hybrid",
-          backview: "",
-          sideview: "",
+          backview: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZiBi_sRa0lw3YDAIMnStN7zUsUBEtrHld6Q&s",
+          sideview: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ418gpwTuigIh8PWw_6hbCJzwS4DIFMjJsbQ&s",
           cpu: "Intel Core i7, 8th generation",
           ram: "8GB",
           storage: "512 GB SSD",

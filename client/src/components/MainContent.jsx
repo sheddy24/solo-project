@@ -10,9 +10,11 @@ import {
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 import { useLaptops } from "../context/laptopContext";
+import { useCart } from "../context/cartContext";
 
 export default function MainContent() {
   const { laptops } = useLaptops(); // Get laptops from context
+  const { addToCart } = useCart(); // Get addToCart function from Cart context
 
   return (
     <Grid container spacing={3}>
@@ -49,6 +51,10 @@ export default function MainContent() {
                   variant="contained"
                   color="primary"
                   startIcon={<ShoppingCartIcon />}
+                  onClick={(event)=>{
+                    event.preventDefault(); // Prevent the default link behavior
+                    event.stopPropagation();
+                    addToCart(laptop)}}
                 >
                   Add to Cart
                 </Button>
@@ -60,14 +66,4 @@ export default function MainContent() {
     </Grid>
   );
 }
-
-
-
-
-
-
-
-
-
-
 
