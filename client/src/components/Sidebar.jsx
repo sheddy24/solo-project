@@ -1,14 +1,17 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
-import { Drawer, Toolbar, Box, List, ListItem, ListItemIcon, ListItemText, Badge } from '@mui/material';
+import { Drawer, Toolbar, Box, List, ListItem, ListItemIcon, ListItemText, Badge, Typography } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import InfoIcon from '@mui/icons-material/Info';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useCart } from '../context/cartContext';
+import { useAuth } from '../context/authContext'; // Import the AuthContext
 
 export default function Sidebar() {
   const { cartItems } = useCart();
+  const { user } = useAuth(); // Get the user from the AuthContext
+
   return (
     <Drawer
       variant="permanent"
@@ -19,18 +22,22 @@ export default function Sidebar() {
       }}
     >
       <Toolbar />
-      <Box sx={{ overflow: 'auto' }}>
+      <Box sx={{ overflow: 'auto', p: 2 }}>
+        {/* Display welcome message */}
+        <Typography variant="h6" sx={{ mb: 2 }}>
+          Happy Shopping, {user ? user.name : 'Guest'}!
+        </Typography>
         <List>
-          <ListItem button>
-            <ListItemIcon sx={{ minWidth: 40 }}> {/* Adjusted icon size */}
-              <HomeIcon sx={{ fontSize: 30 }} /> {/* Increased icon size */}
+          <ListItem button component={Link} to="/">
+            <ListItemIcon sx={{ minWidth: 40 }}>
+              <HomeIcon sx={{ fontSize: 30 }} />
             </ListItemIcon>
             <ListItemText
               primary="Home"
-              primaryTypographyProps={{ fontSize: '1.25rem' }} 
+              primaryTypographyProps={{ fontSize: '1.25rem' }}
             />
           </ListItem>
-          <ListItem button>
+          <ListItem button component={Link} to="/about">
             <ListItemIcon sx={{ minWidth: 40 }}>
               <InfoIcon sx={{ fontSize: 30 }} />
             </ListItemIcon>
@@ -39,7 +46,7 @@ export default function Sidebar() {
               primaryTypographyProps={{ fontSize: '1.25rem' }}
             />
           </ListItem>
-          <ListItem button>
+          <ListItem button component={Link} to="/contact">
             <ListItemIcon sx={{ minWidth: 40 }}>
               <ContactMailIcon sx={{ fontSize: 30 }} />
             </ListItemIcon>
@@ -52,7 +59,7 @@ export default function Sidebar() {
           <ListItem button component={Link} to="/cart">
             <ListItemIcon sx={{ minWidth: 40 }}>
               <Badge badgeContent={cartItems.length} color="primary">
-              <ShoppingCartIcon sx={{ fontSize: 30 }} />
+                <ShoppingCartIcon sx={{ fontSize: 30 }} />
               </Badge>
             </ListItemIcon>
             <ListItemText

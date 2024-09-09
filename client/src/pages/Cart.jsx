@@ -17,7 +17,7 @@ export default function Cart() {
         Shopping Cart
       </Typography>
       {cartItems.map((item) => (
-        <Card sx={{ display: 'flex', marginBottom: 2 }} key={item.id}>
+        <Card sx={{ display: 'flex', marginBottom: 2 }} key={item._id}>
           <CardMedia
             component="img"
             sx={{ width: 150 }}
@@ -44,7 +44,7 @@ export default function Cart() {
             <Button
               variant="outlined"
               color="secondary"
-              onClick={() => removeFromCart(item.id)}
+              onClick={() => removeFromCart(item._id)}
               sx={{ marginTop: 2 }}
             >
               Remove from Cart

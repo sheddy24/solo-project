@@ -44,7 +44,7 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
 const Details = () => {
   const { id } = useParams(); // Get the laptop ID from the URL
   const { laptops } = useLaptops(); // Get laptops from context
-  const laptop = laptops.find((laptop) => laptop.id === id ); // Find the laptop by ID
+  const laptop = laptops.find((laptop) => laptop._id === id ); // Find the laptop by ID
 
   const [view, setView] = useState('main'); // Track the current view
 

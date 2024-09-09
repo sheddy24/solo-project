@@ -10,7 +10,7 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (newItem) => {
     // Check if the item is already in the cart
-    const existingItem = cartItems.find(item => item.id === newItem.id);
+    const existingItem = cartItems.find(item => item._id === newItem._id);
     
     if (!existingItem) {
       setCartItems([...cartItems, newItem]);
@@ -20,8 +20,8 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const removeFromCart = (id) => {
-    setCartItems((prevItems) => prevItems.filter(item => item.id !== id));
+  const removeFromCart = (_id) => {
+    setCartItems((prevItems) => prevItems.filter(item => item._id !== _id));
   };
 
   return (

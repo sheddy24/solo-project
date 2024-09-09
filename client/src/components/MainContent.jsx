@@ -16,11 +16,14 @@ export default function MainContent() {
   const { laptops } = useLaptops(); // Get laptops from context
   const { addToCart } = useCart(); // Get addToCart function from Cart context
 
+  
+  
+
   return (
     <Grid container spacing={3}>
       {laptops.map((laptop) => (
-        <Grid item xs={12} sm={6} md={4} key={laptop.id}>
-          <Link to={`/product/${laptop.id}`} style={{ textDecoration: 'none' }}>
+        <Grid item xs={12} sm={6} md={4} key={laptop._id}>
+          <Link to={`/product/${laptop._id}`} style={{ textDecoration: 'none' }}>
             <Card>
               <CardMedia
                 component="img"
